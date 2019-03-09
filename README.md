@@ -1,10 +1,5 @@
 # Python OpenCV module for AWS Lambda
 
-<p align="center">
-	<img src="http://i.imgur.com/70rGBsz.gif" alt="Simple Mustache Service demo"/><br>
-	<i><b>Simple Mustache Service</b> is an AWS Lambda demo that uses this module</i>
-</p>
-
 ## Description
 This is a simple script that builds a deployment package including OpenCV compatible with the AWS Lambda Python runtime. The dynamic library is compiled with all extended instruction sets supported by Lambda CPU and binaries are stripped to save space. You simply need to add your code inside *lambda_function.py* and possibly your haar cascades files or additional Python modules. You can directly download a [pre-built archive](https://github.com/aeddi/aws-lambda-python-opencv/releases/download/Prebuilt/aws-lambda-python-opencv-prebuilt.zip).
 
@@ -16,7 +11,7 @@ This is a simple script that builds a deployment package including OpenCV compat
 
 ## Module building
 ### Option 1: with an existing instance
-- Download the repo `wget https://github.com/aeddi/aws-lambda-python-opencv/archive/master.zip`
+- Download the repo `wget https://github.com/TylerSandman/aws-lambda-python-opencv/archive/master.zip`
 - Unzip the archive `unzip master.zip`
 - Launch the script `cd aws-lambda-python-opencv-master && ./build.sh`
 
@@ -32,7 +27,7 @@ yum update -y
 yum install -y git cmake gcc-c++ gcc python-devel chrpath
 
 cd /tmp
-wget https://github.com/aeddi/aws-lambda-python-opencv/archive/master.zip
+wget https://github.com/TylerSandman/aws-lambda-python-opencv/archive/master.zip
 unzip master.zip
 chmod 777 aws-lambda-python-opencv-master
 cd aws-lambda-python-opencv-master
