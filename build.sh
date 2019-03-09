@@ -2,7 +2,7 @@
 
 # Setting up build env
 sudo yum update -y
-sudo yum install -y git cmake gcc-c++ gcc python-devel chrpath
+sudo yum install -y git cmake gcc-c++ gcc python-devel chrpath ffmpeg
 mkdir -p lambda-package/cv2 build/numpy
 
 # Build numpy
@@ -18,6 +18,7 @@ cp -rf build/numpy/lib64/python2.7/site-packages/numpy lambda-package
 	git checkout 3.2.0
 	cmake										\
 		-D CMAKE_BUILD_TYPE=RELEASE				\
+		-D WITH_FFMPEG=ON						\
 		-D WITH_TBB=ON							\
 		-D WITH_IPP=ON							\
 		-D WITH_V4L=ON							\
